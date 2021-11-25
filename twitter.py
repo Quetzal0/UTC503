@@ -1,21 +1,19 @@
 import requests
 from bs4 import BeautifulSoup
 import urllib.request
+from collections import Counter
 
-url = "https://www.reddit.com/r/museum/top/"
+url = "https://www.youtube.com/feed/explore"
 
-response = requests.get(url)
 
-soup = BeautifulSoup(response.content, "html.parser")
+def getdata(url): 
+    r = requests.get(url) 
+    return r.text 
 
-images = soup.find_all("img", attrs = {"class": "_2_tDEnGMLxpM6uOa2kaDB3 ImageBox-image media-element _1XWObl-3b9tPy64oaG6fax"})
+htmldata = getdata("https://www.artmajeur.com/fr/oeuvres-d-art?onSale=1") 
+soup = BeautifulSoup(htmldata, 'html.parser') 
+soup = BeautifulSoup(htmldata, 'html.parser')
+images = soup.find_all('img',  attrs={ 'class': 'img-fluid'}) 	
 
-number = 0
-
-print(images)
-
-for image in images:
-	image_src = image["src"]
-	print(image_src)
-	urllib.request.urlretrieve(image_src, str(number))
-	number += 1
+for item in images:
+    print(item['src']) 
