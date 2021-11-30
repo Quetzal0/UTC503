@@ -11,8 +11,6 @@ auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
-
-
 try:
     api.verify_credentials()
     print("Authentication OK")
@@ -20,7 +18,11 @@ except:
     print("Error during authentication")
 
 # the text to be tweeted
-status = "This is a tweet."
+status = "This is a tweet #3."
   
 # posting the tweet
 api.update_status(status)
+
+# posting confirmation
+print('Message posté')
+
