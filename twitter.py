@@ -53,26 +53,16 @@ def publish():
     f.close
 
     if is_in == 'true':
-        
         print('already posted')
         
     else:
-
         with open('D:\\Code\\Python\\non_py\\history.txt', 'a') as f:
-
             f.write(str(newline))
-
             images_description()
-
             index = random_num - 10
-
             status = alt_array[index]
-
             image_path = 'D:\\Code\\Python\\UTC503\\' + str(random_num) + '.jpg'
-
             status = Connection.api.update_with_media(image_path, status)
-
             print('Posted')
-
 
 publish()

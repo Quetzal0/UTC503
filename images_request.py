@@ -8,7 +8,6 @@ getattr(ssl, '_create_unverified_context', None)):
     ssl._create_default_https_context = ssl._create_unverified_context
 
 
-
 def getdata(url): 
     r = requests.get(url) 
     return r.text 
@@ -18,7 +17,7 @@ def download_images():
     soup = BeautifulSoup(htmldata, 'html.parser') 
     images = soup.find_all('img',  attrs={'class': 'img-fluid'})
 
-    number = 0
+    number = 10
 
     for item in images:
         if ('mini' in item['src']):
@@ -27,7 +26,7 @@ def download_images():
             print(item['src'])
             number += 1
 
-# download_images()
+download_images()
 
 alt_array = []
 
@@ -36,7 +35,7 @@ def images_alt():
     soup = BeautifulSoup(htmldata, 'html.parser') 
     images = soup.find_all('img',  attrs={'class': 'img-fluid'})
 
-    number = 0
+    number = 10
 
     for item in images:
         if ('mini' in item['src']):
