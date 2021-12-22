@@ -27,24 +27,3 @@ def download_images():
             number += 1
 
 download_images()
-
-alt_array = []
-
-def images_alt():
-    htmldata = getdata("https://www.artmajeur.com/fr/oeuvres-d-art/sculpture/bronze-1432") 
-    soup = BeautifulSoup(htmldata, 'html.parser') 
-    images = soup.find_all('img',  attrs={'class': 'img-fluid'})
-
-    number = 10
-
-    for item in images:
-        if ('mini' in item['src']):
-            #print(item['alt'])
-            alt_array.append(item['alt'])
-            number += 1
-
-images_alt()
-
-#print(len(alt_array))
-
-print(alt_array[1])
