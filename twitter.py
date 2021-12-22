@@ -5,8 +5,10 @@ from bs4 import BeautifulSoup
 import random
 import config
 
+#images description array
 alt_array = []
 
+#connection to twitter
 class Connection:
     auth = tweepy.OAuthHandler(config.CONSUMER_KEY, config.CONSUMER_SECRET)
     auth.set_access_token(config.ACCESS_TOKEN, config.ACCESS_TOKEN_SECRET)
@@ -18,10 +20,12 @@ class Connection:
     except:
         print('Error during authentication')
 
+#get HTML data from URL
 def getdata_html(url): 
     r = requests.get(url) 
     return r.text 
 
+#get images description from HTML
 def images_description():
     htmldata = getdata_html('https://www.artmajeur.com/fr/oeuvres-d-art/sculpture/bronze-1432') 
     soup = BeautifulSoup(htmldata, 'html.parser') 
@@ -34,6 +38,7 @@ def images_description():
             alt_array.append(item['alt'])
             number += 1
 
+#publish downloaded images with description
 def publish():
 
     random_num = random.randrange(10, 46)
@@ -43,6 +48,7 @@ def publish():
 
     is_in = ''
 
+    #check history of posts
     with open('D:\\Code\\Python\\non_py\\history.txt', 'r') as f:
         for line in f:
             if str(random_num) in line:
@@ -54,7 +60,8 @@ def publish():
 
     if is_in == 'true':
         print('already posted')
-        
+    
+    #publish images
     else:
         with open('D:\\Code\\Python\\non_py\\history.txt', 'a') as f:
             f.write(str(newline))
