@@ -35,6 +35,7 @@ def history():
         for line in f:
             num_in = int(line)
             line_array.append(num_in)
+        f.close
         while random_num in line_array:
             random_num = random.randrange(10, 46)#ATTENTION
     return random_num
@@ -56,7 +57,7 @@ def images_description():
 def publish():
     random_num = history()
     newline = '\n' + str(random_num)
-    
+
     #publish images
     with open('D:\\Code\\Python\\non_py\\history.txt', 'a') as f:
         f.write(str(newline))
