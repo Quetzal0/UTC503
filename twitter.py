@@ -1,8 +1,8 @@
 from re import X
+import random
 import tweepy
 import requests
 from bs4 import BeautifulSoup
-import random
 import config
 
 #connection to twitter
@@ -27,7 +27,6 @@ def getdata_html(url):
 
 #check history of posts
 def history():
-    is_in = 'none'
     random_num = random.randrange(10, 44)
     line_array = []
     with open('history.txt', 'r') as f:
