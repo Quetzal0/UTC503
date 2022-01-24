@@ -18,7 +18,7 @@ def images_description():
     soup = BeautifulSoup(htmldata, 'html.parser') 
     images = soup.find_all('img',  attrs={'class': 'img-fluid'})
 
-    with open('D:\\Code\\Python\\UTC503\\alt.txt', 'a', encoding="utf-8") as f:
+    with open('alt.txt', 'a', encoding="utf-8") as f:
         for item in images:
             if ('mini' in item['src']):
                 newline = item['alt'] + '\n'
