@@ -17,7 +17,6 @@ class Connection:
     except:
         print('Error during authentication')
 
-
 #images description array
 alt_array = []
 
@@ -29,7 +28,7 @@ def getdata_html(url):
 #check history of posts
 def history():
     is_in = 'none'
-    random_num = random.randrange(10, 44)#ATTENTION
+    random_num = random.randrange(10, 44)
     line_array = []
     with open('history.txt', 'r') as f:
         for line in f:
@@ -37,7 +36,7 @@ def history():
             line_array.append(num_in)
         f.close
         while random_num in line_array:
-            random_num = random.randrange(10, 44)#ATTENTION
+            random_num = random.randrange(10, 44)
     return random_num
 
 #publish downloaded images with description
@@ -63,4 +62,6 @@ def publish():
     Connection.api.update_with_media(status, image_path)
     #print(f'Posted :  {str(random_num)}  {alt_array[index]}')
     return 0
+
+#run program
 publish()
