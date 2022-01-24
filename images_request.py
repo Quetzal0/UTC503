@@ -12,6 +12,19 @@ def getdata(url):
     r = requests.get(url) 
     return r.text 
 
+#get images description from HTML
+def images_description():
+    htmldata = getdata('https://www.artmajeur.com/fr/oeuvres-d-art/sculpture/bronze-1432') 
+    soup = BeautifulSoup(htmldata, 'html.parser') 
+    images = soup.find_all('img',  attrs={'class': 'img-fluid'})
+
+    with open('D:\\Code\\Python\\UTC503\\alt.txt', 'a', encoding="utf-8") as f:
+        for item in images:
+            if ('mini' in item['src']):
+                newline = item['alt'] + '\n'
+                f.write(str(newline))
+
+#download images from HTML
 def download_images():
     htmldata = getdata("https://www.artmajeur.com/fr/oeuvres-d-art/sculpture/bronze-1432") 
     soup = BeautifulSoup(htmldata, 'html.parser') 
@@ -25,5 +38,6 @@ def download_images():
             urllib.request.urlretrieve(item['src'], jpg)
             print(item['src'])
             number += 1
+    images_description()
 
 download_images()
