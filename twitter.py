@@ -65,7 +65,7 @@ def publish():
         index = random_num - 10
         status = alt_array[index]
         image_path = 'D:\\Code\\Python\\UTC503\\' + str(random_num) + '.jpg'
-        #Connection.api.update_with_media(image_path, status)
+        Connection.api.update_with_media(image_path, status)
         print('Posted : ' + str(random_num) + ' ' + alt_array[index])
         return 0
 
