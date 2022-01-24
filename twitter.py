@@ -31,7 +31,7 @@ def history():
     is_in = 'none'
     random_num = random.randrange(10, 44)#ATTENTION
     line_array = []
-    with open('D:\\Code\\Python\\UTC503\\history.txt', 'r') as f:
+    with open('history.txt', 'r') as f:
         for line in f:
             num_in = line
             line_array.append(num_in)
@@ -46,10 +46,10 @@ def publish():
     newline = '\n' + str(random_num)
 
     #publish images
-    with open('D:\\Code\\Python\\UTC503\\history.txt', 'a') as f:
+    with open('history.txt', 'a') as f:
         f.write(str(newline))
         f.close
-    with open('D:\\Code\\Python\\UTC503\\alt.txt', 'r', encoding="utf-8") as f:
+    with open('alt.txt', 'r', encoding="utf-8") as f:
         i = 0
         for line in f:
             print(f'{i}  : {line}')
@@ -59,7 +59,7 @@ def publish():
     
     index = random_num - 10
     status = alt_array[index]
-    image_path = 'D:\\Code\\Python\\UTC503\\' + str(random_num) + '.jpg'
+    image_path = str(random_num) + '.jpg'
     Connection.api.update_with_media(status, image_path)
     #print(f'Posted :  {str(random_num)}  {alt_array[index]}')
     return 0
