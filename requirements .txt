@@ -1,0 +1,1 @@
+Packages needed : tweepy, bs4, urllib.request, request, random.
