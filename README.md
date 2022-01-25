@@ -1,10 +1,15 @@
 # UTC503 / @public_museum
 
-## OBJECTIF DU PROJET :
+## PROJECT AIM :
 
 Publish artworks on @public_museum Twitter account.
 
-## OPERATION : 
+## HOW TO ?
+
+Clone this repository to your device with the following comand :
+```
+$ git clone https://github.com/Quetzal0/UTC503/
+```
 
 ### RUN FIRST images_request.py.
 
