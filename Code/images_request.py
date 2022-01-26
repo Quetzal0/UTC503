@@ -7,7 +7,6 @@ if (not os.environ.get('PYTHONHTTPSVERIFY', '') and
 getattr(ssl, '_create_unverified_context', None)):
     ssl._create_default_https_context = ssl._create_unverified_context
 
-
 def getdata(url): 
     r = requests.get(url) 
     return r.text 

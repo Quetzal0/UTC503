@@ -48,7 +48,6 @@ def publish():
     with open('..\\References\\alt.txt', 'r', encoding="utf-8") as f:
         i = 0
         for line in f:
-            #print(f'{i}  : {line}')
             alt_array.append(line)
             i = i + 1
         f.close
@@ -56,8 +55,13 @@ def publish():
     index = random_num - 10
     status = alt_array[index]
     image_path = str(random_num) + '.jpg'
-    Connection.api.update_with_media(image_path, status)
+    #Connection.api.update_with_media(image_path, status)
     print(f'Posted :  {str(random_num)}  {alt_array[index]}')
     return 0
 
-publish()
+#main
+def main():
+    publish()
+
+if __name__ == "__main__":
+    main()
