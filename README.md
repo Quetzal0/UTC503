@@ -21,7 +21,7 @@ You can see this content :
 - README.md
 - requirements.txt
 
-Enter in the "Code" folder :
+Enter in the Code/ folder :
 ```
 $ cd Code
 ```
