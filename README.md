@@ -6,6 +6,9 @@ Publish artworks on @public_museum Twitter account.
 
 ## HOW TO ?
 
+> - To use this script you must create a Twitter developper account.
+> - Create your python project in the Twitter developper portal.
+
 Clone this repository to your device with the following command :
 ```
 $ git clone https://github.com/Quetzal0/UTC503/
@@ -25,21 +28,24 @@ Enter in the Code/ folder :
 ```
 $ cd Code
 ```
+Show the content :
+```
+$ ls
+```
+You can see this :
+- config.py
+- images_request.py
+- twitter.py
 
-Run images_request.py :
-```
-$ python3 images_request.py
-```
-Once images are downloaded run twitter.py :
+> - Store your Twitter developper project creds in the config.py file.
+
+run twitter.py :
 ```
 $ python3 twitter.py
 ```
+## When all done :
 
-### RUN FIRST images_request.py.
+Create a scheduled task to automatically run the Twitter.py script.
 
-> image_request.py download images & description from https://www.artmajeur.com/fr/oeuvres-d-art/sculpture/bronze-1432 in the file directory.
+## Enjoy !
 
-
-### RUN SECONDLY tweeter.py
-
-> tweeter.py publish on @public_museum Twitter account the previously downloaded images.
