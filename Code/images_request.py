@@ -1,9 +1,8 @@
-import os
+import os, ssl
 from time import sleep
 import requests
 from bs4 import BeautifulSoup
 import urllib.request
-import os, ssl
 
 os.system('cls')
 if (not os.environ.get('PYTHONHTTPSVERIFY', '') and
