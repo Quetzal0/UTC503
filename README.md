@@ -45,6 +45,8 @@ You can see this :
 #### Last step : 
 > Edit file paths in code. Just replace 'your path here' by your real path to the project folder.
 
+### Then ;
+
 run twitter.py :
 ```
 $ python3 twitter.py
