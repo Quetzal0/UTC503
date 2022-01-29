@@ -1,9 +1,10 @@
 '''this file is gonna post images downloaded from <images_request.py>'''
+from asyncio.windows_events import NULL
 import random
 import tweepy
 import requests
 import config
-import images_request
+from images_request import *
 
 class Connection:
     '''This class start the connection with the twitter account'''
@@ -13,7 +14,7 @@ class Connection:
 
     try:
         api.verify_credentials()
-        print('Authentication OK\n')
+        print('Twitter Authentication Ok\n')
     except:
         print('Error during authentication\n')
 
@@ -34,9 +35,14 @@ def history():
         for line in f:
             num_in = line
             history_line_array.append(int(num_in))
-            #Regenerate the random number while it's in the history.txt.
+        #Regenerate the random number while it's in the history.txt.
         while random_num in history_line_array:
             random_num = random.randrange(10, 45)
+    try:
+        i = history_line_array[1]
+        print(f'Images already downloaded {i} \n')
+    except:
+        download_images()
     return random_num
 
 def publish():
