@@ -42,7 +42,7 @@ You can see this :
 > - images_request.py is the module that download all images that we need.
 > - twitter.py is the main file, run it to punlish an image on your Twitter account.
 
-last step : edit file paths in code. Just replace 'your path here' by your real path to the project folder.
+#### last step : edit file paths in code. Just replace 'your path here' by your real path to the project folder.
 
 run twitter.py :
 ```
