@@ -67,7 +67,7 @@ def publish():
     #image path is the path from the image that will be posted.
     image_path = str(random_num) + '.jpg'
     #this line will post a tweet with an image and status.
-    #Connection.api.update_with_media(image_path, status)
+    Connection.api.update_with_media(image_path, status)
     print(f'Posted :  {str(random_num)}  {alt_array[alt_index]}')
     return 0
 
