@@ -42,6 +42,8 @@ You can see this :
 > - images_request.py is the module that download all images that we need.
 > - twitter.py is the main file, run it to punlish an image on your Twitter account.
 
+last step : edit file paths in code. Just replace 'your path here' by your real path to the project folder.
+
 run twitter.py :
 ```
 $ python3 twitter.py
@@ -51,4 +53,12 @@ $ python3 twitter.py
 Create a scheduled task to automatically run the Twitter.py script.
 
 ## Enjoy !
+
+
+
+
+
+## Known issues
+
+This script as been writed on a Microsoft Windows device. Windows use a different way than Linux or MacOS for file paths. So be careful to paths if you don't use Windows.
 
