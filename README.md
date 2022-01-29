@@ -39,6 +39,8 @@ You can see this :
 - twitter.py
 
 > - Store your Twitter developper project creds in the config.py file.
+> - images_request.py is the module that download all images that we need.
+> - twitter.py is the main file, run it to punlish an image on your Twitter account.
 
 run twitter.py :
 ```
