@@ -41,5 +41,3 @@ def download_images():
     images_description()
     sleep(1)
     print('Download done')
-
-download_images()
