@@ -8,6 +8,7 @@ Publish artworks on @public_museum Twitter account.
 
 > - To use this script you must create a Twitter developper account.
 > - Create your python project in the Twitter developper portal.
+> - https://developer.twitter.com/en/portal/dashboard
 
 Clone this repository to your device with the following command :
 ```
