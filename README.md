@@ -35,30 +35,30 @@ $ ls
 ```
 You can see this :
 - config.py
-- images_request.py
-- twitter.py
+- images_request_linux.py
+- images_request_win.py
+- twitter_linux.py
+- twitter_win.py
 
 > - Store your Twitter developper project creds in the config.py file.
 > - images_request.py is the module that download all images that we need.
 > - twitter.py is the main file, run it to punlish an image on your Twitter account.
 
 #### Last step : 
-> Edit file paths in code. Just replace 'your path here' by your real path to the project folder.
+> Edit file paths in images_request.py and twitter.py script. Just replace 'your path here' by your real path to the project folder.
 
 ### Then ;
 
-run twitter.py :
+run script for your system :
+> twitter_win.py for Windows systems
 ```
-$ python3 twitter.py
+$ python3 twitter_win.py
 ```
 ## When all done :
 
 Create a scheduled task to automatically run the Twitter.py script.
 
 ## Enjoy !
-
-
-
 
 
 ## Known issues
